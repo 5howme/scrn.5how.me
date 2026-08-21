@@ -142,7 +142,7 @@ vi.mock("@/contexts/I18nContext", () => ({
 			language: "Language",
 			"systemLanguagePrompt.title": "Use your system language?",
 			"systemLanguagePrompt.description":
-				"We detected English as your system language. Do you want to switch OpenScreen to English?",
+				"We detected English as your system language. Do you want to switch Screen Recorder to English?",
 			"systemLanguagePrompt.keepDefault": "Keep current language",
 			"systemLanguagePrompt.switch": "Switch to English",
 		};

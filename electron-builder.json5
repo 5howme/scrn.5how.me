@@ -1,13 +1,14 @@
 // @see - https://www.electron.build/configuration/configuration
 {
   "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
-  "appId": "com.etiennelescot.openscreen",
+  "appId": "me.5how.scrn",
   "asar": true,
   // .node binaries can't be dlopen'd from inside an asar — must live unpacked.
   "asarUnpack": [
     "**/*.node"
   ],
-  "productName": "Openscreen",
+  "productName": "Screen Recorder",
+  "executableName": "me-5how-scrn",
   "npmRebuild": true,
   // sharp ships ABI-stable (napi) prebuilt binaries with bundled libvips. Building it from source
   // needs a system libvips we don't provide and breaks on CI/local ("vips-cpp.42 not found"), so we
@@ -50,10 +51,10 @@
       }
     ],
     "extendInfo": {
-      "NSAudioCaptureUsageDescription": "OpenScreen needs audio capture permission to record system audio.",
-      "NSMicrophoneUsageDescription": "OpenScreen needs microphone access to record voice audio.",
-      "NSCameraUsageDescription": "OpenScreen needs camera access to record webcam video.",
-      "NSScreenCaptureUsageDescription": "OpenScreen needs screen recording permission to detect and capture windows.",
+      "NSAudioCaptureUsageDescription": "Screen Recorder needs audio capture permission to record system audio.",
+      "NSMicrophoneUsageDescription": "Screen Recorder needs microphone access to record voice audio.",
+      "NSCameraUsageDescription": "Screen Recorder needs camera access to record webcam video.",
+      "NSScreenCaptureUsageDescription": "Screen Recorder needs screen recording permission to detect and capture windows.",
       "NSCameraUseContinuityCameraDeviceType": true
     }
   },
@@ -72,8 +73,8 @@
     "target": [
       "nsis"
     ],
-    "icon": "icons/icons/win/icon.ico",
-    "artifactName": "${productName}.Setup.${version}.${ext}",
+    "icon": "icons/icon.png",
+    "artifactName": "me.5how.scrn_recorder_${version}.${ext}",
     "extraResources": [
       {
         "from": "electron/native/bin",
@@ -84,6 +85,7 @@
   },
   "nsis": {
     "oneClick": false,
+    "shortcutName": "Screen Recorder",
     "allowToChangeInstallationDirectory": true
   }
 }

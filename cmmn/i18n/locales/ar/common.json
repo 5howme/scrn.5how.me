@@ -31,9 +31,9 @@
 		"zoomOut": "تصغير",
 		"toggleFullScreen": "ملء الشاشة",
 		"recordingStatus": "جاري التسجيل: {{source}}",
-		"about": "حول OpenScreen",
+		"about": "حول Screen Recorder",
 		"services": "خدمات",
-		"hide": "إخفاء OpenScreen",
+		"hide": "إخفاء Screen Recorder",
 		"hideOthers": "إخفاء الآخرين",
 		"unhide": "إظهار الكل"
 	},

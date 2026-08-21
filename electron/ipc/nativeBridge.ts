@@ -9,12 +9,12 @@ import {
 	type ProjectFileResult,
 	type ProjectPathResult,
 } from "../../cmmn/native/contracts";
-import type { CursorTelemetryLoadResult } from "../native-bridge/cursor/adapter";
+import type { CursorTelemetryLoadResult } from "../native-bridge/cursor/telemetryCursorAdapter";
 import { TelemetryCursorAdapter } from "../native-bridge/cursor/telemetryCursorAdapter";
 import { CursorService } from "../native-bridge/services/cursorService";
 import { ProjectService } from "../native-bridge/services/projectService";
 import { SystemService } from "../native-bridge/services/systemService";
-import { NativeBridgeStateStore } from "../native-bridge/store";
+import { createNativeBridgeState } from "../native-bridge/store";
 
 export interface NativeBridgeContext {
 	getPlatform: () => NodeJS.Platform;
@@ -93,7 +93,7 @@ export function registerNativeBridgeHandlers(context: NativeBridgeContext) {
 	ipcMain.removeHandler(NATIVE_BRIDGE_CHANNEL);
 
 	const platform = normalizePlatform(context.getPlatform());
-	const store = new NativeBridgeStateStore(platform);
+	const store = createNativeBridgeState(platform);
 	const projectService = new ProjectService({
 		store,
 		getCurrentProjectPath: context.getCurrentProjectPath,

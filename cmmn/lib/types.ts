@@ -1,3 +1,4 @@
+import { clamp01 } from "@/utils/math";
 import type { WebcamLayoutPreset } from "@/lib/compositeLayout";
 
 export type ZoomDepth = 1 | 2 | 3 | 4 | 5 | 6;
@@ -581,4 +582,18 @@ export function clampFocusToDepth(focus: ZoomFocus, _depth: ZoomDepth): ZoomFocu
 function clamp(value: number, min: number, max: number) {
 	if (Number.isNaN(value)) return (min + max) / 2;
 	return Math.min(max, Math.max(min, value));
+}
+
+// An unknown focus means "centre", not "top-left" — so this one can't use the
+// shared clamp, which floors non-finite input to `min`. Same convention as
+// `finiteFraction` in useTimeline.ts.
+function focusOrCentre(value: number): number {
+	return Number.isFinite(value) ? clamp01(value) : 0.5;
+}
+
+export function clampFocus(focus: ZoomFocus): ZoomFocus {
+	return {
+		cx: focusOrCentre(focus.cx),
+		cy: focusOrCentre(focus.cy),
+	};
 }

@@ -49,6 +49,9 @@ if (process.platform === "linux") {
 	}
 }
 
+// userData 폴더를 appId 와 일관되게 고정 — getPath 호출 전에 실행되어야 한다
+app.setName("me.5how.scrn");
+
 export const RECORDINGS_DIR = path.join(app.getPath("userData"), "recordings");
 
 async function ensureRecordingsDir() {
@@ -163,7 +166,7 @@ function setupApplicationMenu() {
 			submenu: [
 				{
 					role: "about",
-					label: mainT("common", "actions.about") || "About OpenScreen",
+					label: mainT("common", "actions.about") || "About Screen Recorder",
 				},
 				{ type: "separator" },
 				{
@@ -173,7 +176,7 @@ function setupApplicationMenu() {
 				{ type: "separator" },
 				{
 					role: "hide",
-					label: mainT("common", "actions.hide") || "Hide OpenScreen",
+					label: mainT("common", "actions.hide") || "Hide Screen Recorder",
 				},
 				{
 					role: "hideOthers",
@@ -347,7 +350,7 @@ function updateTrayMenu(recording: boolean = false) {
 		? mainT("common", "actions.recordingStatus", {
 				source: selectedSourceName,
 			}) || `Recording: ${selectedSourceName}`
-		: "OpenScreen";
+		: "Screen Recorder";
 	const menuTemplate = recording
 		? [
 				{

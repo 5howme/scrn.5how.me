@@ -194,7 +194,7 @@ export function createEditorWindow(): BrowserWindow {
 		resizable: true,
 		alwaysOnTop: false,
 		skipTaskbar: false,
-		title: "OpenScreen",
+		title: "Screen Recorder",
 		backgroundColor: "#09090b",
 		show: false, // shown via ready-to-show to avoid white flash on first load
 		webPreferences: {
@@ -346,7 +346,7 @@ export function createNotesWindow(): BrowserWindow {
 		minHeight: 400,
 		maxWidth: 640,
 		maxHeight: 720,
-		title: "OpenScreen - Notes",
+		title: "Screen Recorder - Notes",
 		backgroundColor: "#09090b",
 		resizable: true,
 		alwaysOnTop: true,

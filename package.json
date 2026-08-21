@@ -1,7 +1,7 @@
 {
-	"name": "openscreen-capturer",
+	"name": "me.5how.scrn",
 	"private": true,
-	"version": "0.6.46",
+	"version": "0.6.49",
 	"type": "module",
 	"packageManager": "npm@10.9.4",
 	"engines": {
@@ -9,8 +9,8 @@
 		"npm": "10.9.4"
 	},
 	"author": {
-		"name": "Siddharth Vaddem",
-		"url": "https://github.com/siddharthvaddem"
+		"name": "5how.me",
+		"url": "https://scrn.5how.me"
 	},
 	"main": "dist-electron/main.js",
 	"scripts": {
@@ -89,5 +89,6 @@
 		"vite-plugin-electron": "^0.29.1",
 		"vite-plugin-electron-renderer": "^1.0.0",
 		"vitest": "^4.1.4"
-	}
+	},
+	"description": "Screen Recorder for scrn.5how.me"
 }

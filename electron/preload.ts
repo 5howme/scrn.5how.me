@@ -12,6 +12,8 @@ const ASSET_BASE_URL_ARG_PREFIX = "--asset-base-url=";
 const assetBaseUrlArg = process.argv.find((arg) => arg.startsWith(ASSET_BASE_URL_ARG_PREFIX));
 const assetBaseUrl = assetBaseUrlArg ? assetBaseUrlArg.slice(ASSET_BASE_URL_ARG_PREFIX.length) : "";
 
+const PLATFORM = process.platform;
+
 contextBridge.exposeInMainWorld("electronAPI", {
 	assetBaseUrl,
 	invokeNativeBridge: <TData>(request: NativeBridgeRequest) => {
@@ -236,9 +238,7 @@ contextBridge.exposeInMainWorld("electronAPI", {
 		ipcRenderer.on("menu-save-project-as", listener);
 		return () => ipcRenderer.removeListener("menu-save-project-as", listener);
 	},
-	getPlatform: () => {
-		return ipcRenderer.invoke("get-platform");
-	},
+	getPlatform: () => PLATFORM,
 	revealInFolder: (filePath: string) => {
 		return ipcRenderer.invoke("reveal-in-folder", filePath);
 	},
