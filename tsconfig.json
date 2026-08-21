@@ -1,0 +1,41 @@
+{
+	"compilerOptions": {
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/components/video-editor/VideoEditor": ["VideoEditorWebHandoff.tsx"],
+			"@/components/video-editor/ShortcutsConfigDialog": ["stubs/ShortcutsConfigDialog.tsx"],
+			"@/lib/exporter/localSourceFile": ["stubs/localSourceFile.ts"],
+			"@/components/launch/*": ["launch/*"],
+			"@/components/*": ["cmmn/components/*"],
+			"@/lib/*": ["cmmn/lib/*"],
+			"@/hooks/*": ["hooks/*"],
+			"@/contexts/*": ["cmmn/contexts/*"],
+			"@/i18n/*": ["cmmn/i18n/*"],
+			"@/native/*": ["cmmn/native/*"],
+			"@/utils/*": ["cmmn/utils/*"],
+			"@/assets/*": ["cmmn/assets/*"]
+		},
+
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
+
+		/* Linting */
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true
+	},
+	"include": ["app", "cmmn", "launch", "hooks", "electron", "stubs", "VideoEditorWebHandoff.tsx"],
+	"exclude": ["**/*.test.ts", "**/*.test.tsx"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}

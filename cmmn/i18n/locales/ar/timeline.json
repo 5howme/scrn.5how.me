@@ -1,0 +1,66 @@
+{
+	"buttons": {
+		"addZoom": "إضافة تكبير (Z)",
+		"suggestZooms": "اقتراح تكبير من المؤشر",
+		"addTrim": "إضافة قص (T)",
+		"addAnnotation": "إضافة شرح (A)",
+		"addBlur": "إضافة تمويه (B)",
+		"addSpeed": "إضافة سرعة (S)",
+		"addCursorHidden": "إضافة إخفاء المؤشر",
+		"addCamera": "إضافة فيديو الكاميرا من ملف"
+	},
+	"hints": {
+		"pressZoom": "اضغط Z لإضافة تكبير",
+		"pressTrim": "اضغط T لإضافة قص",
+		"pressAnnotation": "اضغط A لإضافة شرح",
+		"pressBlur": "اضغط B لإضافة منطقة تمويه",
+		"pressSpeed": "اضغط S لإضافة سرعة",
+		"addCursorHidden": "استخدم زر العين لإخفاء المؤشر",
+		"addCamera": "استخدم زر الكاميرا لوضع ملف فيديو"
+	},
+	"labels": {
+		"pan": "تحريك",
+		"zoom": "تكبير",
+		"trim": "قص",
+		"speed": "سرعة",
+		"zoomItem": "تكبير {{index}}",
+		"trimItem": "قص {{index}}",
+		"speedItem": "سرعة {{index}}",
+		"annotationItem": "شرح",
+		"blurItem": "تمويه {{index}}",
+		"imageItem": "صورة",
+		"emptyText": "نص فارغ",
+		"cursorHiddenItem": "إخفاء المؤشر {{index}}",
+		"cameraItem": "مقطع الكاميرا"
+	},
+	"emptyState": {
+		"noVideo": "لم يتم تحميل أي فيديو",
+		"dragAndDrop": "اسحب وأفلت مقطع فيديو لبدء التعديل"
+	},
+	"errors": {
+		"cannotPlaceZoom": "لا يمكن وضع التكبير هنا",
+		"zoomExistsAtLocation": "يوجد تكبير بالفعل في هذا الموقع أو لا توجد مساحة كافية متاحة.",
+		"zoomSuggestionUnavailable": "معالج اقتراح التكبير غير متوفر",
+		"noCursorTelemetry": "لا تتوفر بيانات قياس المؤشر",
+		"noCursorTelemetryDescription": "قم بتسجيل الشاشة أولاً لإنشاء اقتراحات بناءً على المؤشر.",
+		"noUsableTelemetry": "لا توجد بيانات قياس مؤشر قابلة للاستخدام",
+		"noUsableTelemetryDescription": "التسجيل لا يتضمن بيانات حركة مؤشر كافية.",
+		"noDwellMoments": "لم يتم العثور على لحظات توقف واضحة للمؤشر",
+		"noDwellMomentsDescription": "جرب تسجيلاً مع توقفات مؤشر أبطأ عند الإجراءات المهمة.",
+		"noAutoZoomSlots": "لا تتوفر خانات تكبير تلقائي",
+		"noAutoZoomSlotsDescription": "نقاط التوقف المكتشفة تتداخل مع مناطق التكبير الحالية.",
+		"cannotPlaceTrim": "لا يمكن وضع القص هنا",
+		"trimExistsAtLocation": "يوجد قص بالفعل في هذا الموقع أو لا توجد مساحة كافية متاحة.",
+		"cannotPlaceSpeed": "لا يمكن وضع السرعة هنا",
+		"speedExistsAtLocation": "توجد منطقة سرعة بالفعل في هذا الموقع أو لا توجد مساحة كافية متاحة.",
+		"cannotPlaceCursorHidden": "لا يمكن وضع إخفاء المؤشر هنا",
+		"cursorHiddenExistsAtLocation": "توجد بالفعل منطقة إخفاء المؤشر في هذا الموقع أو لا توجد مساحة كافية.",
+		"cannotPlaceCamera": "لا يمكن وضع مقطع الكاميرا هنا",
+		"cameraExistsAtLocation": "يوجد بالفعل مقطع كاميرا في هذا الموقع أو لا توجد مساحة كافية.",
+		"cameraProbeFailed": "تعذر قراءة ملف الفيديو المحدد"
+	},
+	"success": {
+		"addedZoomSuggestions": "تمت إضافة {{count}} اقتراح تكبير بناءً على المؤشر",
+		"addedZoomSuggestionsPlural": "تمت إضافة {{count}} اقتراحات تكبير بناءً على المؤشر"
+	}
+}
