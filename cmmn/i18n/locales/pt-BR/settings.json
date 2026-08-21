@@ -8,7 +8,8 @@
 			"title": "Modo de Foco",
 			"manual": "Manual",
 			"auto": "Automático",
-			"autoDescription": "A câmera segue a posição do cursor gravado"
+			"autoDescription": "A câmera segue a posição do cursor gravado",
+			"lockedDisclaimer": "Controlado pelo botão global de foco automático na timeline. Desative-o para definir o modo de foco por zoom."
 		},
 		"threeD": {
 			"title": "Rotação 3D",
@@ -23,7 +24,8 @@
 			"x": "X (%)",
 			"y": "Y (%)",
 			"hint": "0 = mais à esquerda / topo, 100 = mais à direita / inferior"
-		}
+		},
+		"previewHold": "Segure para pré-visualizar o efeito de zoom"
 	},
 	"speed": {
 		"playbackSpeed": "Velocidade de Reprodução",
@@ -50,7 +52,8 @@
 		"webcamHeight": "Altura da webcam",
 		"lockAspectRatio": "Travar proporção",
 		"reactiveWebcam": "Encolher ao ampliar",
-		"reactiveWebcamDescription": "A câmera diminui suavemente enquanto o vídeo está ampliado, para não atrapalhar."
+		"reactiveWebcamDescription": "A câmera diminui suavemente enquanto o vídeo está ampliado, para não atrapalhar.",
+		"mirrorWebcam": "Espelhar webcam"
 	},
 	"effects": {
 		"title": "Efeitos de Vídeo",
@@ -109,7 +112,8 @@
 	},
 	"project": {
 		"save": "Salvar Projeto",
-		"load": "Carregar Projeto"
+		"load": "Carregar Projeto",
+		"new": "Novo projeto"
 	},
 	"preset": {
 		"load": "Carregar Predefinição",
@@ -124,10 +128,6 @@
 		"videoButton": "Exportar Vídeo",
 		"gifButton": "Exportar GIF",
 		"chooseSaveLocation": "Escolher Local para Salvar"
-	},
-	"links": {
-		"reportBug": "Relatar Bug",
-		"starOnGithub": "Dar Estrela no GitHub"
 	},
 	"imageUpload": {
 		"invalidFileType": "Tipo de arquivo inválido",
@@ -240,5 +240,25 @@
 		"bottomRight": "Inferior direito",
 		"left": "Esquerda",
 		"right": "Direita"
+	},
+	"support": {
+		"reportBug": "Reportar bug",
+		"saveDiagnostics": "Salvar diagnósticos",
+		"starOnGithub": "Dar estrela no GitHub"
+	},
+	"textAnimation": {
+		"fade": "Esmaecer",
+		"none": "Nenhuma",
+		"pop": "Pop",
+		"pulse": "Pulsar",
+		"rise": "Subir",
+		"selectAnimation": "Selecionar animação",
+		"slideLeft": "Deslizar à esquerda",
+		"title": "Animação de texto",
+		"typewriter": "Máquina de escrever"
+	},
+	"timeline": {
+		"title": "Linha do tempo",
+		"waveform": "Mostrar forma de onda do áudio na faixa de corte"
 	}
 }

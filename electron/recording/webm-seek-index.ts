@@ -2,7 +2,8 @@ import fs from "node:fs/promises";
 // Upstream reindexes through the native compositor addon; this build has no
 // addon, so the default remuxer reports "unavailable" and callers fall back
 // to the EBML duration patch.
-type SeekRemuxer = { remuxSeekable(inputPath: string, outputPath: string): Promise<unknown | null> };
+type RemuxStats = { packets: number; streams: number; wallS: number };
+type SeekRemuxer = { remuxSeekable(inputPath: string, outputPath: string): Promise<RemuxStats | null> };
 const nullRemuxer: SeekRemuxer = { remuxSeekable: async () => null };
 
 export type ReindexResult =

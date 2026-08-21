@@ -1,3 +1,4 @@
+import type { RecordingPrefs } from "./ipc/handlers";
 import { contextBridge, ipcRenderer, webUtils } from "electron";
 import type { NativeMacRecordingRequest } from "../cmmn/lib/nativeMacRecording";
 import type { NativeWindowsRecordingRequest } from "../cmmn/lib/nativeWindowsRecording";
@@ -154,6 +155,17 @@ contextBridge.exposeInMainWorld("electronAPI", {
 	},
 	openExternalUrl: (url: string) => {
 		return ipcRenderer.invoke("open-external-url", url);
+	},
+	getRecordingPrefs: () => {
+		return ipcRenderer.invoke("get-recording-prefs");
+	},
+	setRecordingPrefs: (prefs: Partial<RecordingPrefs>) => {
+		return ipcRenderer.invoke("set-recording-prefs", prefs);
+	},
+	onRecordingPrefsChanged: (callback: (prefs: RecordingPrefs) => void) => {
+		const listener = (_event: unknown, prefs: RecordingPrefs) => callback(prefs);
+		ipcRenderer.on("recording-prefs-changed", listener);
+		return () => ipcRenderer.removeListener("recording-prefs-changed", listener);
 	},
 	startWebHandoff: (editorOrigin: string) => {
 		return ipcRenderer.invoke("start-web-handoff", editorOrigin);

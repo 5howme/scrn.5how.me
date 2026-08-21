@@ -76,5 +76,21 @@
 			"annotation": "Annotazione",
 			"blur": "Sfocatura"
 		}
-	}
+	},
+	"emptyState": {
+		"description": "Importa un video per iniziare a modificare, oppure carica un progetto SCREEN 5HOW.ME esistente.",
+		"dragDropHint": "oppure trascina qui un file di progetto .openscreen",
+		"dropErrors": {
+			"couldNotOpenMessage": "Impossibile aprire il file di progetto. Il video a cui fa riferimento potrebbe essere stato spostato o eliminato.",
+			"couldNotOpenTitle": "Impossibile aprire il file",
+			"unsupportedFormatMessage": "Qui si possono rilasciare solo file di progetto .openscreen. Per importare un video usa il pulsante \"Importa file video…\" in questa schermata.",
+			"unsupportedFormatTitle": "Formato non supportato"
+		},
+		"dropOverlay": "Rilascia il file di progetto per aprirlo",
+		"importVideoButton": "Importa file video…",
+		"loadProjectButton": "Carica progetto…",
+		"supportedFormats": "Formati supportati: MP4, MOV, WebM, MKV, AVI, M4V, WMV",
+		"title": "Nessun progetto aperto"
+	},
+	"loadingEditor": "Caricamento dell'editor..."
 }

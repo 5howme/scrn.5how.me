@@ -7,7 +7,11 @@
 		"addSpeed": "新增速度 (S)",
 		"addBlur": "新增模糊 (B)",
 		"addCursorHidden": "新增隱藏游標",
-		"addCamera": "從檔案新增相機影片"
+		"addCamera": "從檔案新增相機影片",
+		"autoZoomOn": "自動縮放建議已開啟 — 點擊移除建議的縮放",
+		"autoZoomOff": "自動縮放建議已關閉 — 點擊依游標建議縮放",
+		"autoFocusAllOn": "所有縮放已開啟自動對焦 — 點擊全部切換為手動",
+		"autoFocusAllOff": "所有縮放自動對焦（鏡頭跟隨游標）"
 	},
 	"hints": {
 		"pressZoom": "按 Z 新增縮放",

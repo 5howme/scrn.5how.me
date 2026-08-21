@@ -7,7 +7,11 @@
 		"addBlur": "Adicionar Desfoque (B)",
 		"addSpeed": "Adicionar Velocidade (S)",
 		"addCursorHidden": "Adicionar ocultação do cursor",
-		"addCamera": "Adicionar vídeo de câmera de arquivo"
+		"addCamera": "Adicionar vídeo de câmera de arquivo",
+		"autoZoomOn": "Sugestões de zoom automático ativadas — clique para remover os zooms sugeridos",
+		"autoZoomOff": "Sugestões de zoom automático desativadas — clique para sugerir zooms pelo cursor",
+		"autoFocusAllOn": "Foco automático ativado em todos os zooms — clique para mudar todos para manual",
+		"autoFocusAllOff": "Foco automático em todos os zooms (a câmera segue o cursor)"
 	},
 	"hints": {
 		"pressZoom": "Pressione Z para adicionar zoom",

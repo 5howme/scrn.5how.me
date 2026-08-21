@@ -41,7 +41,8 @@
 		"cameraDisconnected": "Webcam desconectada.",
 		"cameraNotFound": "Câmera não encontrada.",
 		"permissionDenied": "Permissão de gravação negada. Por favor, permita a gravação de tela.",
-		"selectSource": "Por favor, selecione uma fonte para gravar"
+		"selectSource": "Por favor, selecione uma fonte para gravar",
+		"accessibilityAllowAndRetry": "Permita o acesso de Acessibilidade para o SCREEN 5HOW.ME e pressione gravar novamente para iniciar a contagem."
 	},
 	"autoCaptions": {
 		"button": "Legendas automáticas",
@@ -75,5 +76,21 @@
 			"annotation": "Anotação",
 			"blur": "Desfoque"
 		}
-	}
+	},
+	"emptyState": {
+		"description": "Importe um vídeo para começar a editar ou carregue um projeto SCREEN 5HOW.ME existente.",
+		"dragDropHint": "ou arraste e solte um arquivo de projeto .openscreen aqui",
+		"dropErrors": {
+			"couldNotOpenMessage": "O arquivo de projeto não pôde ser aberto. O vídeo referenciado pode ter sido movido ou excluído.",
+			"couldNotOpenTitle": "Não foi possível abrir o arquivo",
+			"unsupportedFormatMessage": "Somente arquivos de projeto .openscreen podem ser soltos aqui. Para importar um vídeo, use o botão \"Importar arquivo de vídeo…\" nesta tela.",
+			"unsupportedFormatTitle": "Formato não suportado"
+		},
+		"dropOverlay": "Solte o arquivo de projeto para abrir",
+		"importVideoButton": "Importar arquivo de vídeo…",
+		"loadProjectButton": "Carregar projeto…",
+		"supportedFormats": "Formatos suportados: MP4, MOV, WebM, MKV, AVI, M4V, WMV",
+		"title": "Nenhum projeto aberto"
+	},
+	"loadingEditor": "Carregando o editor..."
 }

@@ -1,5 +1,5 @@
 import { DEFAULT_CURSOR_THEME_ID } from "@/lib/cursor/cursorThemes";
-import type { ExportFormat, ExportQuality, GifFrameRate, GifSizePreset } from "@/lib/exporter";
+import type { ExportFormat, ExportQuality, GifFrameRate, GifSizePreset } from "@/lib/types";
 import { DEFAULT_WALLPAPER } from "@/lib/wallpaper";
 import type { AspectRatio } from "@/utils/aspectRatioUtils";
 import {

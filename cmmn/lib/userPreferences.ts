@@ -2,7 +2,7 @@ import {
 	DEFAULT_EDITOR_LAYOUT_SETTINGS,
 	DEFAULT_EXPORT_SETTINGS,
 } from "@/lib/editorDefaults";
-import type { ExportFormat, ExportQuality } from "@/lib/exporter";
+import type { ExportFormat, ExportQuality } from "@/lib/types";
 import type { AspectRatio } from "@/utils/aspectRatioUtils";
 
 const PREFS_KEY = "openscreen_user_preferences";
@@ -35,6 +35,10 @@ export interface UserPreferences {
 	trayLayout: "horizontal" | "vertical";
 	/** Uploaded background videos, as "video:<path>" wallpaper values. */
 	backgroundVideos: string[];
+	/** Force the software (CPU) encoder for native Windows capture */
+	preferSoftwareEncoder: boolean;
+	/** Suppress the one-time toast shown when capture falls back to the software encoder */
+	hideSoftwareEncoderFallbackNotice: boolean;
 }
 
 export const DEFAULT_PREFS: UserPreferences = {
@@ -46,6 +50,8 @@ export const DEFAULT_PREFS: UserPreferences = {
 	projectFolder: null,
 	trayLayout: "horizontal",
 	backgroundVideos: [],
+	preferSoftwareEncoder: false,
+	hideSoftwareEncoderFallbackNotice: false,
 };
 
 /** Parses stored preferences without throwing on malformed JSON. */
@@ -107,6 +113,14 @@ export function loadUserPreferences(): UserPreferences {
 					(value): value is string => typeof value === "string" && value.startsWith("video:"),
 				)
 			: DEFAULT_PREFS.backgroundVideos,
+		preferSoftwareEncoder:
+			typeof raw.preferSoftwareEncoder === "boolean"
+				? raw.preferSoftwareEncoder
+				: DEFAULT_PREFS.preferSoftwareEncoder,
+		hideSoftwareEncoderFallbackNotice:
+			typeof raw.hideSoftwareEncoderFallbackNotice === "boolean"
+				? raw.hideSoftwareEncoderFallbackNotice
+				: DEFAULT_PREFS.hideSoftwareEncoderFallbackNotice,
 	};
 }
 

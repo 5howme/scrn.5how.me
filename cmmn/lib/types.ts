@@ -597,3 +597,10 @@ export function clampFocus(focus: ZoomFocus): ZoomFocus {
 		cy: focusOrCentre(focus.cy),
 	};
 }
+
+// Export settings vocabulary — shared with rcdr (userPreferences/editorDefaults
+// persist these), so it lives here rather than in the editor-only exporter.
+export type ExportQuality = "medium" | "good" | "source";
+export type ExportFormat = "mp4" | "gif";
+export type GifFrameRate = 15 | 20 | 25 | 30;
+export type GifSizePreset = "medium" | "large" | "original";

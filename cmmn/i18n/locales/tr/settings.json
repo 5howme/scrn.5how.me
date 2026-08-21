@@ -8,7 +8,8 @@
 			"title": "Odak Modu",
 			"manual": "Manuel",
 			"auto": "Otomatik",
-			"autoDescription": "Kamera kaydedilen imleç konumunu takip eder"
+			"autoDescription": "Kamera kaydedilen imleç konumunu takip eder",
+			"lockedDisclaimer": "Zaman çizelgesindeki genel otomatik odak anahtarıyla kontrol edilir. Yakınlaştırma başına ayarlamak için kapatın."
 		},
 		"threeD": {
 			"title": "3D Döndürme",
@@ -225,7 +226,8 @@
 		"smoothing": "Yumuşatma",
 		"motionBlur": "Hareket Bulanıklığı",
 		"clickBounce": "Tıklama Sıçraması",
-		"clipToBounds": "Tuvale Kırp"
+		"clipToBounds": "Tuvale Kırp",
+		"clipToBoundsDescription": "İmleci video karesi içinde tutar. İmlecin kenarları aşmasına izin vermek için kapatın — yakınlaştırma veya kaydırmada yararlıdır."
 	},
 	"language": {
 		"title": "Dil"
@@ -247,5 +249,16 @@
 		"bottomRight": "Sağ alt",
 		"left": "Sol",
 		"right": "Sağ"
+	},
+	"textAnimation": {
+		"fade": "Solma",
+		"none": "Yok",
+		"pop": "Pop",
+		"pulse": "Nabız",
+		"rise": "Yükselme",
+		"selectAnimation": "Animasyon seç",
+		"slideLeft": "Sola kaydır",
+		"title": "Metin animasyonu",
+		"typewriter": "Daktilo"
 	}
 }

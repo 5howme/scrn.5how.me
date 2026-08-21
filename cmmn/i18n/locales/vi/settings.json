@@ -8,7 +8,8 @@
 			"title": "Chế độ lấy nét",
 			"manual": "Thủ công",
 			"auto": "Tự động",
-			"autoDescription": "Máy ảnh đi theo vị trí con trỏ đã ghi"
+			"autoDescription": "Máy ảnh đi theo vị trí con trỏ đã ghi",
+			"lockedDisclaimer": "Được điều khiển bởi công tắc Tự động lấy nét chung trên dòng thời gian. Tắt nó để đặt chế độ lấy nét cho từng thu phóng."
 		},
 		"customScale": "Thu phóng tùy chỉnh",
 		"position": {
@@ -225,7 +226,8 @@
 		"smoothing": "Làm mượt",
 		"motionBlur": "Làm mờ chuyển động",
 		"clickBounce": "Nảy khi nhấp",
-		"clipToBounds": "Cắt theo khung"
+		"clipToBounds": "Cắt theo khung",
+		"clipToBoundsDescription": "Giữ con trỏ trong khung video. Tắt để con trỏ vượt ra ngoài mép — hữu ích khi phóng to hoặc di chuyển khung."
 	},
 	"language": {
 		"title": "Ngôn ngữ"
@@ -247,5 +249,16 @@
 		"bottomRight": "Dưới phải",
 		"left": "Trái",
 		"right": "Phải"
+	},
+	"textAnimation": {
+		"fade": "Mờ dần",
+		"none": "Không",
+		"pop": "Bật ra",
+		"pulse": "Nhịp đập",
+		"rise": "Nổi lên",
+		"selectAnimation": "Chọn hiệu ứng",
+		"slideLeft": "Trượt sang trái",
+		"title": "Hiệu ứng chữ",
+		"typewriter": "Máy đánh chữ"
 	}
 }

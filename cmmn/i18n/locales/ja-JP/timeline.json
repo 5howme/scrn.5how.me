@@ -7,7 +7,11 @@
 		"addBlur": "ぼかしを追加 (B)",
 		"addSpeed": "再生速度を追加 (S)",
 		"addCursorHidden": "カーソル非表示を追加",
-		"addCamera": "ファイルからカメラ映像を追加"
+		"addCamera": "ファイルからカメラ映像を追加",
+		"autoZoomOn": "自動ズーム提案オン — クリックで提案されたズームを削除",
+		"autoZoomOff": "自動ズーム提案オフ — クリックでカーソルからズームを提案",
+		"autoFocusAllOn": "全ズームの自動フォーカスオン — クリックで全て手動に切替",
+		"autoFocusAllOff": "全ズームを自動フォーカス（カメラがカーソルを追従）"
 	},
 	"hints": {
 		"pressZoom": "Zキーを押してズームを追加",

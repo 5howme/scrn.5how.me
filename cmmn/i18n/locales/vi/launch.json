@@ -20,7 +20,8 @@
 			"numberedList": "Danh sách đánh số",
 			"blockquote": "Trích dẫn",
 			"codeBlock": "Khối mã"
-		}
+		},
+		"openStudio": "Mở Studio"
 	},
 	"audio": {
 		"enableSystemAudio": "Bật âm thanh hệ thống",
@@ -41,7 +42,10 @@
 		"loading": "Đang tải nguồn...",
 		"screens": "Màn hình ({{count}})",
 		"windows": "Cửa sổ ({{count}})",
-		"defaultSourceName": "Màn hình"
+		"defaultSourceName": "Màn hình",
+		"emptyDescription": "Nếu bạn vừa cấp quyền ghi màn hình, hãy tải lại bộ chọn này. Trên macOS có thể cần mở lại Screen Recorder.",
+		"emptyTitle": "Không tìm thấy màn hình hoặc cửa sổ",
+		"loadFailedDescription": "Screen Recorder không thể tải các nguồn ghi hình. Hãy tải lại bộ chọn và thử lại."
 	},
 	"recording": {
 		"selectSource": "Vui lòng chọn một nguồn để ghi",

@@ -7,7 +7,11 @@
 		"addBlur": "Thêm Làm mờ (B)",
 		"addSpeed": "Thêm Tốc độ (S)",
 		"addCursorHidden": "Thêm ẩn con trỏ",
-		"addCamera": "Thêm video camera từ tệp"
+		"addCamera": "Thêm video camera từ tệp",
+		"autoZoomOn": "Đề xuất thu phóng tự động đang bật — nhấp để xóa các thu phóng được đề xuất",
+		"autoZoomOff": "Đề xuất thu phóng tự động đang tắt — nhấp để đề xuất thu phóng theo con trỏ",
+		"autoFocusAllOn": "Tự động lấy nét cho mọi thu phóng đang bật — nhấp để chuyển tất cả sang thủ công",
+		"autoFocusAllOff": "Tự động lấy nét mọi thu phóng (camera đi theo con trỏ)"
 	},
 	"hints": {
 		"pressZoom": "Nhấn Z để thêm thu phóng",

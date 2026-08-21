@@ -20,7 +20,8 @@
 			"numberedList": "Нумерованный список",
 			"blockquote": "Цитата",
 			"codeBlock": "Блок кода"
-		}
+		},
+		"openStudio": "Открыть студию"
 	},
 	"audio": {
 		"enableSystemAudio": "Включить системное аудио",
@@ -41,7 +42,10 @@
 		"loading": "Загрузка источников...",
 		"screens": "Экраны ({{count}})",
 		"windows": "Окна ({{count}})",
-		"defaultSourceName": "Экран"
+		"defaultSourceName": "Экран",
+		"emptyDescription": "Если вы только что дали разрешение на запись экрана, перезагрузите этот список. На macOS может потребоваться перезапустить Screen Recorder.",
+		"emptyTitle": "Экраны или окна не найдены",
+		"loadFailedDescription": "Screen Recorder не смог загрузить источники захвата. Перезагрузите список и попробуйте снова."
 	},
 	"recording": {
 		"selectSource": "Пожалуйста, выберите источник для записи",

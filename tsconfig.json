@@ -16,6 +16,7 @@
 			"@/hooks/*": ["hooks/*"],
 			"@/contexts/*": ["cmmn/contexts/*"],
 			"@/i18n/*": ["cmmn/i18n/*"],
+			"@/native": ["cmmn/native/index.ts"],
 			"@/native/*": ["cmmn/native/*"],
 			"@/utils/*": ["cmmn/utils/*"],
 			"@/assets/*": ["cmmn/assets/*"]

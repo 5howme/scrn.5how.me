@@ -20,7 +20,8 @@
 			"numberedList": "قائمة مرقمة",
 			"blockquote": "اقتباس",
 			"codeBlock": "كتلة تعليمات برمجية"
-		}
+		},
+		"openStudio": "فتح الاستوديو"
 	},
 	"audio": {
 		"enableSystemAudio": "تفعيل صوت النظام",
@@ -41,7 +42,10 @@
 		"loading": "جاري تحميل المصادر...",
 		"screens": "الشاشات ({{count}})",
 		"windows": "النوافذ ({{count}})",
-		"defaultSourceName": "الشاشة"
+		"defaultSourceName": "الشاشة",
+		"emptyDescription": "إذا منحت إذن تسجيل الشاشة للتو، أعد تحميل هذا المنتقي. على macOS قد تحتاج إلى إعادة فتح Screen Recorder.",
+		"emptyTitle": "لم يتم العثور على شاشات أو نوافذ",
+		"loadFailedDescription": "تعذر على Screen Recorder تحميل مصادر الالتقاط. أعد تحميل هذا المنتقي وحاول مجددًا."
 	},
 	"recording": {
 		"selectSource": "يرجى تحديد مصدر للتسجيل",

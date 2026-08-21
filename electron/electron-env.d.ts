@@ -156,11 +156,71 @@ interface Window {
 			discarded?: boolean;
 			error?: string;
 		}>;
+		// Linux 채널 타이핑 — 이 빌드에 배선 없음, 훅의 플랫폼 가드 뒤에서만 참조
+		isNativeLinuxCaptureAvailable: () => Promise<{
+			success: boolean;
+			available: boolean;
+			helperPath?: string;
+			reason?: "unsupported-platform" | "missing-helper" | string;
+			error?: string;
+		}>;
+		/**
+		 * Raises the compositor's picker and holds the grant until the recording
+		 * actually starts, so a countdown can run AFTER the user has chosen.
+		 *
+		 * Best-effort: a `success: false` means "start normally", never "fail".
+		 */
+		prepareNativeLinuxRecording: (
+			request: import("../cmmn/lib/nativeLinuxRecording").NativeLinuxRecordingRequest,
+		) => Promise<{
+			success: boolean;
+			recordingId?: number;
+			sourceKind?: "monitor" | "window" | "virtual" | null;
+			reason?: string;
+			error?: string;
+		}>;
+		/** Drops a prepared session when the countdown was abandoned. */
+		cancelNativeLinuxPrepare: () => Promise<{ success: boolean }>;
+		startNativeLinuxRecording: (
+			request: import("../cmmn/lib/nativeLinuxRecording").NativeLinuxRecordingRequest,
+		) => Promise<import("../cmmn/lib/nativeLinuxRecording").NativeLinuxRecordingStartResult>;
+		pauseNativeLinuxRecording: () => Promise<{
+			success: boolean;
+			error?: string;
+		}>;
+		resumeNativeLinuxRecording: () => Promise<{
+			success: boolean;
+			error?: string;
+		}>;
+		stopNativeLinuxRecording: (discard?: boolean) => Promise<{
+			success: boolean;
+			path?: string;
+			session?: import("../cmmn/lib/recordingSession").RecordingSession;
+			message?: string;
+			discarded?: boolean;
+			error?: string;
+		}>;
+		attachNativeLinuxWebcamRecording: (payload: {
+			screenVideoPath: string;
+			recordingId: number;
+			webcam: import("../cmmn/lib/recordingSession").RecordedVideoAssetInput;
+			cursorCaptureMode?: import("../cmmn/lib/recordingSession").CursorCaptureMode;
+			durationMs?: number;
+			webcamOffsetMs?: number;
+		}) => Promise<{
+			success: boolean;
+			path?: string;
+			session?: import("../cmmn/lib/recordingSession").RecordingSession;
+			message?: string;
+			error?: string;
+		}>;
 		attachNativeMacWebcamRecording: (payload: {
 			screenVideoPath: string;
 			recordingId: number;
 			webcam: import("../cmmn/lib/recordingSession").RecordedVideoAssetInput;
 			cursorCaptureMode?: import("../cmmn/lib/recordingSession").CursorCaptureMode;
+			durationMs?: number;
+			webcamOffsetMs?: number;
 		}) => Promise<{
 			success: boolean;
 			path?: string;
@@ -284,7 +344,14 @@ interface Window {
 		onMenuLoadProject: (callback: () => void) => () => void;
 		onMenuSaveProject: (callback: () => void) => () => void;
 		onMenuSaveProjectAs: (callback: () => void) => () => void;
-		getPlatform: () => Promise<string>;
+		getRecordingPrefs: () => Promise<import("./ipc/handlers").RecordingPrefs>;
+		setRecordingPrefs: (
+			prefs: Partial<import("./ipc/handlers").RecordingPrefs>,
+		) => Promise<import("./ipc/handlers").RecordingPrefs>;
+		onRecordingPrefsChanged: (
+			callback: (prefs: import("./ipc/handlers").RecordingPrefs) => void,
+		) => () => void;
+		getPlatform: () => string;
 		revealInFolder: (
 			filePath: string,
 		) => Promise<{ success: boolean; error?: string; message?: string }>;

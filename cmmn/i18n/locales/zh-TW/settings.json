@@ -8,7 +8,8 @@
 			"title": "對焦模式",
 			"manual": "手動",
 			"auto": "自動",
-			"autoDescription": "攝影機跟隨錄製時的游標位置"
+			"autoDescription": "攝影機跟隨錄製時的游標位置",
+			"lockedDisclaimer": "由時間軸上的全域自動對焦開關控制。關閉後可為每個縮放單獨設定對焦模式。"
 		},
 		"speed": {},
 		"threeD": {
@@ -226,7 +227,8 @@
 		"smoothing": "平滑",
 		"motionBlur": "動態模糊",
 		"clickBounce": "點擊彈跳",
-		"clipToBounds": "裁切至畫布"
+		"clipToBounds": "裁切至畫布",
+		"clipToBoundsDescription": "將游標保持在影片畫面內。關閉後游標可越過邊緣 — 縮放或平移時很有用。"
 	},
 	"language": {
 		"title": "語言"
@@ -248,5 +250,16 @@
 		"bottomRight": "右下",
 		"left": "左",
 		"right": "右"
+	},
+	"textAnimation": {
+		"fade": "淡入",
+		"none": "無",
+		"pop": "彈出",
+		"pulse": "脈衝",
+		"rise": "上升",
+		"selectAnimation": "選擇動畫",
+		"slideLeft": "左滑",
+		"title": "文字動畫",
+		"typewriter": "打字機"
 	}
 }

@@ -7,7 +7,11 @@
 		"addBlur": "Aggiungi sfocatura (B)",
 		"addSpeed": "Aggiungi velocità (S)",
 		"addCursorHidden": "Aggiungi nascondi cursore",
-		"addCamera": "Aggiungi video camera da file"
+		"addCamera": "Aggiungi video camera da file",
+		"autoZoomOn": "Suggerimenti di zoom automatico attivi — clicca per rimuovere gli zoom suggeriti",
+		"autoZoomOff": "Suggerimenti di zoom automatico disattivati — clicca per suggerire zoom dal cursore",
+		"autoFocusAllOn": "Messa a fuoco automatica attiva su tutti gli zoom — clicca per passare al manuale",
+		"autoFocusAllOff": "Messa a fuoco automatica su tutti gli zoom (la camera segue il cursore)"
 	},
 	"hints": {
 		"pressZoom": "Premi Z per aggiungere zoom",

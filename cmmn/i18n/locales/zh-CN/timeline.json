@@ -7,7 +7,11 @@
 		"addSpeed": "添加速度 (S)",
 		"addBlur": "添加模糊 (B)",
 		"addCursorHidden": "添加隐藏光标",
-		"addCamera": "从文件添加相机视频"
+		"addCamera": "从文件添加相机视频",
+		"autoZoomOn": "自动缩放建议已开启 — 点击移除建议的缩放",
+		"autoZoomOff": "自动缩放建议已关闭 — 点击根据光标建议缩放",
+		"autoFocusAllOn": "所有缩放已开启自动聚焦 — 点击全部切换为手动",
+		"autoFocusAllOff": "所有缩放自动聚焦（镜头跟随光标）"
 	},
 	"hints": {
 		"pressZoom": "按 Z 添加缩放",

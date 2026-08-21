@@ -409,6 +409,23 @@ const CURSOR_TELEMETRY_VERSION = 2;
 const CURSOR_SAMPLE_INTERVAL_MS = 33;
 const MAX_CURSOR_SAMPLES = 60 * 60 * 30; // 1 hour @ 30Hz
 
+export interface RecordingPrefs {
+	micEnabled: boolean;
+	micDeviceId: string | null;
+	camEnabled: boolean;
+	camDeviceId: string | null;
+	systemAudioEnabled: boolean;
+	cursorCaptureMode: CursorCaptureMode;
+}
+let recordingPrefs: RecordingPrefs = {
+	micEnabled: false,
+	micDeviceId: null,
+	camEnabled: false,
+	camDeviceId: null,
+	systemAudioEnabled: false,
+	cursorCaptureMode: "editable-overlay",
+};
+
 let cursorRecordingSession: CursorRecordingSession | null = null;
 let pendingCursorRecordingData: CursorRecordingData | null = null;
 let nativeWindowsCaptureProcess: ChildProcessWithoutNullStreams | null = null;
@@ -499,7 +516,6 @@ async function removeNativeWindowsCaptureOutputs(
 		}
 	}
 }
-const NATIVE_WINDOWS_CAPTURE_STOP_TIMEOUT_MS = 60_000;
 let nativeMacCaptureProcess: ChildProcessWithoutNullStreams | null = null;
 let nativeMacCaptureOutput = "";
 let nativeMacCaptureTargetPath: string | null = null;
@@ -2636,6 +2652,19 @@ export function registerIpcHandlers(
 			console.error("Failed to open URL:", error);
 			return { success: false, error: String(error) };
 		}
+	});
+
+	ipcMain.handle("get-recording-prefs", () => {
+		return recordingPrefs;
+	});
+
+	ipcMain.handle("set-recording-prefs", (_, prefs: Partial<RecordingPrefs>) => {
+		recordingPrefs = { ...recordingPrefs, ...prefs };
+		const mainWin = getMainWindow();
+		if (mainWin && !mainWin.isDestroyed()) {
+			mainWin.webContents.send("recording-prefs-changed", recordingPrefs);
+		}
+		return recordingPrefs;
 	});
 
 	ipcMain.handle("start-web-handoff", async (_, editorOrigin: string) => {

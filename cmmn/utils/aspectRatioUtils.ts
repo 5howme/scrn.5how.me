@@ -10,6 +10,10 @@ export const ASPECT_RATIOS = [
 ] as const;
 
 export type AspectRatio = (typeof ASPECT_RATIOS)[number];
+export function isAspectRatio(value: unknown): value is AspectRatio {
+	return typeof value === "string" && (ASPECT_RATIOS as readonly string[]).includes(value);
+}
+
 
 const NATIVE_ASPECT_RATIO_FALLBACK = 16 / 9;
 
